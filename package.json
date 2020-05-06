@@ -1,0 +1,50 @@
+{
+  "name": "pierce-api-test",
+  "version": "1.0.0",
+  "description": "Pierce API Test",
+  "main": "index.js",
+  "repository": "https://github.com/CamposBruno/pierce-api-test",
+  "author": "Bruno Campos",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "dev": "nodemon src/app.ts -r dotenv/config",
+    "preproduction": "npm install && sequelize db:create && sequelize db:migrate && sequelize db:seed:all && tsc",
+    "production": "node -r dotenv/config build/app.js"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.31.0",
+    "@typescript-eslint/parser": "^2.31.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "nodemon": "^2.0.3",
+    "sucrase": "^3.13.0",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "@types/bcrypt": "^3.0.0",
+    "@types/bluebird": "^3.5.30",
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.6",
+    "@types/hapi__joi": "^17.1.0",
+    "@types/helmet": "^0.0.46",
+    "@types/jsonwebtoken": "^8.3.9",
+    "@types/node": "^13.13.5",
+    "@types/validator": "^13.0.0",
+    "bcrypt": "^4.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.22.0",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.0.3",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.7",
+    "sequelize-cli": "^5.5.1"
+  }
+}
